@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deshant Kumar | Developer Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #030712;
+            color: #f3f4f6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+        }
+
+        .portfolio-container {
+            width: 100%;
+            max-width: 1100px;
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 5rem;
+            align-items: start;
+        }
+
+        /* Left Column: Fixed Profile Info */
+        .sticky-profile {
+            position: sticky;
+            top: 4rem;
+        }
+
+        .brand-header {
+            font-size: 1.1rem;
+            font-weight: 800;
+            letter-spacing: 0.15em;
+            color: #00f2fe;
+            margin-bottom: 2.5rem;
+        }
+
+        .name-title {
+            font-size: 3.8rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            color: #ffffff;
+            margin-bottom: 1.2rem;
+        }
+
+        .headline-role {
+            font-size: 1.25rem;
+            color: #00f2fe;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .bio-text {
+            color: #9ca3af;
+            font-size: 1.05rem;
+            line-height: 1.65;
+            margin-bottom: 3rem;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+            color: #030712;
+            text-decoration: none;
+            padding: 1rem 2.2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            box-shadow: 0 4px 20px rgba(0, 210, 255, 0.2);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 210, 255, 0.4);
+        }
+
+        /* Right Column: Interactive Content Stream */
+        .content-stream {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stream-segment {
+            position: relative;
+            padding-left: 2.5rem;
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 3.5rem;
+        }
+
+        .stream-segment:last-child {
+            padding-bottom: 0;
+            border-left: 1px solid transparent;
+        }
+
+        .stream-segment::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 4px;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: #00f2fe;
+            box-shadow: 0 0 12px #00f2fe, 0 0 4px #00f2fe;
+        }
+
+        .segment-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #00f2fe;
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+        }
+
+        .segment-title {
+            font-size: 1.65rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.4rem;
+        }
+
+        .segment-subtitle {
+            color: #6b7280;
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .segment-desc {
+            color: #9ca3af;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Pill System for Technologies */
+        .pill-cluster {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .pill {
+            background: rgba(0, 242, 254, 0.03);
+            border: 1px solid rgba(0, 242, 254, 0.2);
+            padding: 0.4rem 0.9rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #00f2fe;
+        }
+
+        @media (max-width: 900px) {
+            .portfolio-container {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+            .sticky-profile {
+                position: relative;
+                top: 0;
+            }
+            .name-title {
+                font-size: 3rem;
+            }
+            body {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="portfolio-container">
+        
+        <div class="sticky-profile">
+            <div></div>
+            <div class="name-title">Dishant Kumar</div>
+            <div class="headline-role">Full-Stack Developer & AI Enthusiast</div>
+            <div class="bio-text">
+                I'm a student developer passionate about building modern web applications using Next.js, JavaScript and Python. I'm also exploring Artificial Intelligence, Agentic AI, OpenAI SDK, CrewAI and LangChain while continuously improving my development skills.
+            </div>
+            <a href="https://www.linkedin.com/in/deshant-kumar33" target="_blank" class="cta-button">
+                Connect on LinkedIn →
+            </a>
+        </div>
+
+        <div class="content-stream">
+            
+            <div class="stream-segment">
+                <div class="segment-label">Featured Projects</div>
+                <div class="segment-title">Projects I've Built</div>
+                <div class="segment-subtitle">Real-world Practice</div>
+                <div class="segment-desc">
+                    Portfolio Website, Banking Balance Tracker, Animated Movie Vault, Food Delivery Website, Creative Hands Business Website and an Agentic AI learning website.
+                </div>
+            </div>
+
+            <div class="stream-segment">
+                <div class="segment-label">Technologies</div>
+                <div class="segment-title">Skills & Tools</div>
+                <div class="pill-cluster">
+                    <span class="pill">Next.js</span>
+                    <span class="pill">JavaScript</span>
+                    <span class="pill">Python</span>
+                    <span class="pill">HTML</span>
+                    <span class="pill">CSS</span>
+                    <span class="pill">Git</span>
+                    <span class="pill">GitHub</span>
+                    <span class="pill">Node.js</span>
+                    <span class="pill">OpenAI SDK</span>
+                    <span class="pill">CrewAI</span>
+                    <span class="pill">LangChain</span>
+                </div>
+            </div>
+
+            <div class="stream-segment">
+                <div class="segment-label">Currently Learning</div>
+                <div class="segment-title">Growing Every Day</div>
+                <div class="segment-desc">
+                    Advanced Next.js, Full-Stack Development, AI Agents, Prompt Engineering, Backend Development and scalable web applications.
+                </div>
+            </div>
+
+            <div class="stream-segment">
+                <div class="segment-label">Education</div>
+                <div class="stream-title">Student Developer</div>
+                <div class="segment-desc">
+                     • Self-taught Web Developer • Passionate about creating modern and AI-powered web applications.
+                </div>
+            </div>
+
+            <div class="stream-segment">
+                <div class="segment-label">Goal</div>
+                <div class="stream-title">Future Vision</div>
+                <div class="segment-desc">
+                    To become a professional Full-Stack Developer specializing in AI-powered applications and build products that solve real-world problems.
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
